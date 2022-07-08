@@ -10,14 +10,14 @@ numbers = {
     "M": 1000
 }
 
-def check_chars(roman):
+def check_digits(roman):
     for c in roman:
         if c not in numbers:
             return False
     return True
 
 def RtD(roman):
-    if not check_chars(roman):
+    if not check_digits(roman):
         return -1 # If the number contains non-roman digits, return the error code -1
     roman = roman.upper()
     dec = 0 # dec is the sum of all the numbers
